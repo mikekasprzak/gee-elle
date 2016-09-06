@@ -11,6 +11,9 @@
 			bottom:0;
 			margin:auto;
 		}
+		body {
+			background: #222229;
+		}
 		#gl {
 			display:block;
 		}
@@ -34,6 +37,9 @@
 			gl_FragColor = vec4(1, 1, 0.5, 1);
 		}
 	</script>
+	<audio id="music" src="StSkAnBo.mp3" preload="auto">
+		No Audio for You.
+	</audio>
 
 	<script>
 	"use strict";
@@ -105,6 +111,10 @@
 		//gl.depthFunc(gl.LEQUAL);
 		
 		loop();
+		
+		var music = document.getElementById('music');
+		//music.loop = true;
+		music.play();
 	}
 	
 	var twirl = 0;
